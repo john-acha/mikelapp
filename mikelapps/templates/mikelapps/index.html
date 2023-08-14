@@ -1,0 +1,17 @@
+{% extends 'mikelapps/base.html' %}
+
+{% block page_header %}
+  <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+      <h1 class="display-3">Welcome to system!</h1>
+      
+      <p class="lead">You are about to enter a platform that will allow
+          you to manage and administer your products and their information using qrcodes.
+          With this tool, you will be able to efficiently track your inventories,
+          speed up your sales processes and have greater control over your products.</p>
+
+      <a class="btn btn-primary btn-lg mt-1"
+          href="{% url 'accounts:register' %}">Register &raquo;</a>
+    </div>
+  </div>
+{% endblock page_header %}

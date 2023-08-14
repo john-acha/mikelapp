@@ -1,0 +1,18 @@
+{% extends "mikelapps/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h2>Add a new entry.</h2>
+{% endblock page_header %}
+
+{% block content %}
+
+  <p><a href="{% url 'mikelapps:product' product.id %}">{{ product }}</a></p>
+
+  <form action="{% url 'mikelapps:new_entry' product.id %}" method='post'>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Add entry" %}
+  </form>
+
+{% endblock content %}
